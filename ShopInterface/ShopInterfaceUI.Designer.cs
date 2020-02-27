@@ -1,6 +1,6 @@
 ﻿namespace ShopInterface
 {
-    partial class Form1
+    partial class ShopInterfaceUI
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -38,6 +38,7 @@
             this.vendorListBox = new System.Windows.Forms.ListBox();
             this.vendorListBoxLabel = new System.Windows.Forms.Label();
             this.storePayoutLabel = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerText
@@ -138,11 +139,22 @@
             this.storePayoutLabel.TabIndex = 9;
             this.storePayoutLabel.Text = "Процент магазина:";
             // 
-            // Form1
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label.Location = new System.Drawing.Point(658, 352);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(31, 17);
+            this.label.TabIndex = 10;
+            this.label.Text = "0.0";
+            // 
+            // ShopInterfaceUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 540);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.storePayoutLabel);
             this.Controls.Add(this.vendorListBox);
             this.Controls.Add(this.vendorListBoxLabel);
@@ -153,8 +165,8 @@
             this.Controls.Add(this.itemListBox);
             this.Controls.Add(this.itemListBoxLabel);
             this.Controls.Add(this.headerText);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ShopInterfaceUI";
+            this.Text = "Книжный магазин";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +184,7 @@
         private System.Windows.Forms.ListBox vendorListBox;
         private System.Windows.Forms.Label vendorListBoxLabel;
         private System.Windows.Forms.Label storePayoutLabel;
+        private System.Windows.Forms.Label label;
     }
 }
 

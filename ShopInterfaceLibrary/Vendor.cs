@@ -11,5 +11,17 @@ namespace ShopInterfaceLibrary
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public double Commission { get; set; }
+        public decimal PaymentDue { get; set; }
+        public string Display
+        {
+            get
+            {
+                return string.Format($"{LastName} {FirstName} - {PaymentDue} руб.");
+            }
+        }
+        public Vendor()
+        {
+            Commission = .8;
+        }
     }
 }

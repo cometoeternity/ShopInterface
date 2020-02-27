@@ -11,5 +11,10 @@ namespace ShopInterfaceLibrary
         public string Name { get; set; }
         public List<Vendor> Vendors { get; set; }
         public List<Items> Items  { get; set; }
+        public Store()
+        {
+            Vendors = new List<Vendor>();
+            Items = new List<Items>();
+        }
     }
 }
