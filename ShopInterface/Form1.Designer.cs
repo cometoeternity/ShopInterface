@@ -35,6 +35,9 @@
             this.cartItemListLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.purchaseButton = new System.Windows.Forms.Button();
+            this.vendorListBox = new System.Windows.Forms.ListBox();
+            this.vendorListBoxLabel = new System.Windows.Forms.Label();
+            this.storePayoutLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerText
@@ -99,18 +102,50 @@
             // purchaseButton
             // 
             this.purchaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.purchaseButton.Location = new System.Drawing.Point(630, 307);
+            this.purchaseButton.Location = new System.Drawing.Point(631, 297);
             this.purchaseButton.Name = "purchaseButton";
             this.purchaseButton.Size = new System.Drawing.Size(117, 41);
             this.purchaseButton.TabIndex = 6;
             this.purchaseButton.Text = "Приобрести";
             this.purchaseButton.UseVisualStyleBackColor = true;
             // 
+            // vendorListBox
+            // 
+            this.vendorListBox.FormattingEnabled = true;
+            this.vendorListBox.ItemHeight = 16;
+            this.vendorListBox.Location = new System.Drawing.Point(76, 352);
+            this.vendorListBox.Name = "vendorListBox";
+            this.vendorListBox.Size = new System.Drawing.Size(247, 148);
+            this.vendorListBox.TabIndex = 8;
+            // 
+            // vendorListBoxLabel
+            // 
+            this.vendorListBoxLabel.AutoSize = true;
+            this.vendorListBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.vendorListBoxLabel.Location = new System.Drawing.Point(71, 320);
+            this.vendorListBoxLabel.Name = "vendorListBoxLabel";
+            this.vendorListBoxLabel.Size = new System.Drawing.Size(145, 29);
+            this.vendorListBoxLabel.TabIndex = 7;
+            this.vendorListBoxLabel.Text = "Продавцы:";
+            // 
+            // storePayoutLabel
+            // 
+            this.storePayoutLabel.AutoSize = true;
+            this.storePayoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.storePayoutLabel.Location = new System.Drawing.Point(501, 352);
+            this.storePayoutLabel.Name = "storePayoutLabel";
+            this.storePayoutLabel.Size = new System.Drawing.Size(151, 17);
+            this.storePayoutLabel.TabIndex = 9;
+            this.storePayoutLabel.Text = "Процент магазина:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 540);
+            this.Controls.Add(this.storePayoutLabel);
+            this.Controls.Add(this.vendorListBox);
+            this.Controls.Add(this.vendorListBoxLabel);
             this.Controls.Add(this.purchaseButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cartListBox);
@@ -134,6 +169,9 @@
         private System.Windows.Forms.Label cartItemListLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button purchaseButton;
+        private System.Windows.Forms.ListBox vendorListBox;
+        private System.Windows.Forms.Label vendorListBoxLabel;
+        private System.Windows.Forms.Label storePayoutLabel;
     }
 }
 
