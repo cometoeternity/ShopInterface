@@ -33,12 +33,12 @@
             this.itemListBox = new System.Windows.Forms.ListBox();
             this.cartListBox = new System.Windows.Forms.ListBox();
             this.cartItemListLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addToCartButton = new System.Windows.Forms.Button();
             this.purchaseButton = new System.Windows.Forms.Button();
             this.vendorListBox = new System.Windows.Forms.ListBox();
             this.vendorListBoxLabel = new System.Windows.Forms.Label();
             this.storePayoutLabel = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
+            this.storeProfitLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerText
@@ -90,15 +90,16 @@
             this.cartItemListLabel.TabIndex = 3;
             this.cartItemListLabel.Text = "Корзина:";
             // 
-            // button1
+            // addToCartButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(329, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 49);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Добавить в Корзину";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addToCartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addToCartButton.Location = new System.Drawing.Point(329, 201);
+            this.addToCartButton.Name = "addToCartButton";
+            this.addToCartButton.Size = new System.Drawing.Size(166, 49);
+            this.addToCartButton.TabIndex = 5;
+            this.addToCartButton.Text = "Добавить в Корзину";
+            this.addToCartButton.UseVisualStyleBackColor = true;
+            this.addToCartButton.Click += new System.EventHandler(this.addToCartButton_Click);
             // 
             // purchaseButton
             // 
@@ -109,6 +110,7 @@
             this.purchaseButton.TabIndex = 6;
             this.purchaseButton.Text = "Приобрести";
             this.purchaseButton.UseVisualStyleBackColor = true;
+            this.purchaseButton.Click += new System.EventHandler(this.purchaseButton_Click);
             // 
             // vendorListBox
             // 
@@ -139,27 +141,27 @@
             this.storePayoutLabel.TabIndex = 9;
             this.storePayoutLabel.Text = "Процент магазина:";
             // 
-            // label
+            // storeProfitLabel
             // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label.Location = new System.Drawing.Point(658, 352);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(31, 17);
-            this.label.TabIndex = 10;
-            this.label.Text = "0.0";
+            this.storeProfitLabel.AutoSize = true;
+            this.storeProfitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.storeProfitLabel.Location = new System.Drawing.Point(658, 352);
+            this.storeProfitLabel.Name = "storeProfitLabel";
+            this.storeProfitLabel.Size = new System.Drawing.Size(31, 17);
+            this.storeProfitLabel.TabIndex = 10;
+            this.storeProfitLabel.Text = "0.0";
             // 
             // ShopInterfaceUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 540);
-            this.Controls.Add(this.label);
+            this.Controls.Add(this.storeProfitLabel);
             this.Controls.Add(this.storePayoutLabel);
             this.Controls.Add(this.vendorListBox);
             this.Controls.Add(this.vendorListBoxLabel);
             this.Controls.Add(this.purchaseButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addToCartButton);
             this.Controls.Add(this.cartListBox);
             this.Controls.Add(this.cartItemListLabel);
             this.Controls.Add(this.itemListBox);
@@ -179,12 +181,12 @@
         private System.Windows.Forms.ListBox itemListBox;
         private System.Windows.Forms.ListBox cartListBox;
         private System.Windows.Forms.Label cartItemListLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addToCartButton;
         private System.Windows.Forms.Button purchaseButton;
         private System.Windows.Forms.ListBox vendorListBox;
         private System.Windows.Forms.Label vendorListBoxLabel;
         private System.Windows.Forms.Label storePayoutLabel;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label storeProfitLabel;
     }
 }
 
